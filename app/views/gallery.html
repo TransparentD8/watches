@@ -1,0 +1,33 @@
+<div class="gallery">
+	<div class="gallery-brands-carousel">
+		<h1 class="gallery-title"><span><img src="/images/dash.png" alt=""></span>brands<span><img src="/images/dash.png" alt=""></span></h1>
+		<ul rn-carousel rn-carousel-auto-slide class="gallery-carousel">
+			<li class="carousel-brand"><a href="#"><img src="/images/carousel/gallery/1.png" alt=""><img src="/images/carousel/gallery/3.png" alt=""><img src="/images/carousel/gallery/14.png" alt=""><img src="/images/carousel/gallery/5.png" alt=""><img src="/images/carousel/gallery/11.png" alt=""></a></li>
+			<li class="carousel/-brand"><a href="#"><img src="/images/carousel/gallery/4.png" alt=""><img src="/images/carousel/gallery/13.png" alt=""><img src="/images/carousel/gallery/12.png" alt=""><img src="/images/carousel/gallery/10.png" alt=""><img src="/images/carousel/gallery/6.png" alt=""></a></li>
+			<li class="carousel/-brand"><a href="#"><img src="/images/carousel/gallery/7.png" alt=""><img src="/images/carousel/gallery/15.png" alt=""><img src="/images/carousel/gallery/2.png" alt=""><img src="/images/carousel/gallery/8.png" alt=""><img src="/images/carousel/gallery/9.png" alt=""></a></li>
+		</ul>
+	</div>
+	<div class="items">
+		<div class="filtering">
+				<span><img src="/images/search-icon.png" alt=""></span><input ng-model="query" type="text" value="search">
+				<span ng-click="orderProp = 'id';reverse = !reverse"><span class="filter-span">latest</span></span>
+				<span ng-click="orderProp = 'price';reverse = !reverse"><span class="filter-span">price</span></span>
+			</div>
+		<div class="items-list">
+			<div id="absence">
+				<h3>No matching found</h3>
+			</div>
+			<ul class="unordered">
+				<li ng-repeat="watch in watches | orderBy:orderProp:reverse | startFrom:(currentPage - 1) * entryLimit | limitTo: 12" class="item">
+					<a href="#/gallery/{{watch.id}}"><img ng-src="{{watch.src[0]}}" class="item-img"></a>
+					<div class="item-info">
+						<img ng-src="{{watch.label}}" alt="">
+						<p>{{watch.price}}$</p>
+						<a href="#/gallery/{{watch.id}}"><span class="item-button">view</span></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="items-pagination" id="pagination"><pagination total-items="noOfPages" ng-model="currentPage" items-per-page="12"></pagination></div>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
+	height: 150px;
+	background-color: #BBB2A6;
+	.footer-contact {
+		height: 50px;
+		width: 100%;
+		background-color: #EFECEA;
+		text-align: center;
+	}
+	.footer-nav {
+		height: 74px;
+		text-align: center;
+		.contact {
+			padding-top: 40px;
+			a {
+				padding: 7px;
+				border: 1px solid white;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: 	white;
+				transition: all 0.3s ease-in-out;
+				&:hover {
+					background-color: white;
+					color: #BBB2A6;
+				}
+
+			}
+		}
+		.copyright {
+			text-align: right;
+			margin-top: 14px;
+			text-transform: uppercase;
+			color: white;
+			p {
+				margin: 0;
+			}
+		}
+	}
+	
+}

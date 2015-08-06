@@ -1,0 +1,17 @@
+<div class="ind-watch">
+	<img class="ind-img" src="{{mainImageUrl}}" alt="">
+	<div class="ind-info">
+		<img ng-src="{{watch.label}}" alt="">
+		<h3>This is an original watch</h3>
+		<hr>	
+		<h2><span>hot price:</span> {{watch.price}}$</h2>
+		<p>in stock <br>free shipping <br>2 years warranty</p>
+		<a href="#">buy</a>
+	</div>
+	<hr>	
+	<ul>
+		<li ng-repeat="thumb in watch.src" class="ind-li">
+			<img class="ind-thumb" ng-src="{{thumb}}"  ng-click="setImage(thumb)" alt="">
+		</li>
+	</ul>
+</div>

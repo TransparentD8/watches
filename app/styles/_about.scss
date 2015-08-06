@@ -1,0 +1,50 @@
+.about-page {
+	width: 100%;
+	.about-text {
+		width: 80%;
+	}
+	.how-to-buy {
+		text-align: center;
+		margin: 50px 150px 200px 150px;
+		h1 {
+			font-family: $georgia;
+			font-weight: 100;
+			color: #BBB2A6;
+		}
+		.searching,  {
+			margin: 50px 0;
+			@include display(flex);
+			@include flex-wrap(wrap);
+			@include flex-direction(row);
+			@include justify-content(space-around);
+			.text {
+				width: 	450px;
+				text-align: center;
+				font-size: 16px;
+				font-family: $georgia;
+				letter-spacing: 0.5px;
+				line-height: 2;
+				h2 {
+					color: #BBB2A6;
+				}
+				a {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+@media(max-width: 885px) {
+	.about-page .how-to-buy {
+		margin: 100px 0 150px;
+		.searching {
+			margin: 0;
+			.text {
+				width: 300px;
+				font-size: 16px;
+				letter-spacing: normal;
+				line-height: normal;
+			}
+		}
+	}
+}

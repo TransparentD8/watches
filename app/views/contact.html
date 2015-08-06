@@ -1,0 +1,41 @@
+<div class="form-page">
+	<h2 class="form-title">Please let us know if you have any questions</h1>
+	<div class="form-wrapper">	
+		<div class="form-div">
+			<form class="form" method="post" action="http://formspree.io/prozrachniy@gmail.com">
+
+				<p class="name">
+					<input name="name" type="text"  placeholder="Name" class="textareas" />
+				</p>
+
+				<p class="email">
+					<input name="_replyto" type="email"  class="textareas" placeholder="Email" />
+				</p>
+
+				<p class="text">
+					<textarea name="text" class="textareas" placeholder="Comment"></textarea>
+				</p>
+
+
+				<div class="submit">
+					<input type="submit" value="SEND" class="submit-button"/>
+				</div>
+			</form>
+		</div>
+		<div class="block">
+			<img class="socials" src="/images/social/1.png" alt="">
+			<img class="socials" src="/images/social/2.png" alt="">
+			<img class="socials" src="/images/social/3.png" alt="">
+			<img class="socials" src="/images/social/4.png" alt="">
+		</div>
+	</div>
+	<hr>
+	<h2>Or pay us a visit</h2>
+	<div class="map">
+		<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+			<ui-gmap-marker coords="marker.coords" idkey="marker.id">
+				<p>Наше местонахождение</p>
+			</ui-gmap-marker>
+		</ui-gmap-google-map>
+	</div>
+</div>

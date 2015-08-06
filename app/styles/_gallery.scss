@@ -1,0 +1,113 @@
+.gallery {
+	min-height: 800px;
+	.gallery-brands-carousel {
+		height: 200px;
+		margin: 40px 0 15px;
+		text-align: center;
+		.gallery-title {
+			text-transform: uppercase;
+			font-weight: 100;
+		}
+		.gallery-carousel{
+			height: 164px;
+			img {
+				width: 200px;	
+			}
+		}
+	}
+	.items {
+		min-height: 500px;
+		overflow: hidden;
+		.filtering {
+			text-align: center;
+			margin: 30px 0;
+			font-size: 16px;
+			font-family: $georgia;
+			select {
+				outline: none;
+			}
+			span input {
+				padding: 0;
+				outline: none;
+				font-family: $georgia;
+			}
+			span .filter-span {
+				padding: 3px;
+				border: 1px solid #9A9898;
+			}
+		}
+		.items-list {
+			width: 100%;
+			display: inline-block;
+
+			#absence {
+				display: block;
+				text-align: center;
+				font-size: 18px;
+				font-family: $georgia;
+				letter-spacing: 1px;
+				padding: 20px;
+			}
+
+			.unordered {
+				@include display(flex);
+				@include flex-wrap(wrap);
+				@include flex-direction(row);
+				@include justify-content(center);
+				margin: 30px 0 150px;
+				.item {
+					width: 300px;
+					margin: 10px;
+					height: 200px;
+					display: inline-block;
+					position: relative;
+					padding: 1px;
+					.item-img {
+						max-height: 200px;
+						max-width: 200px;
+						transition: all 0.3s ease-in-out;
+						&:hover {
+							transform: 	scale(1.1);
+							-webkit-filter: brightness(110%);
+						}
+					}
+					.item-info {
+						position: absolute;
+						top: 0;
+						right: 50px;
+						text-align: center;
+						a {
+							text-decoration: none;
+							.item-button {
+								text-transform: uppercase;
+								color: #BBB2A6;
+								padding: 2px;
+								border: 1px solid #BBB2A6;
+								transition: all 0.3s ease-in-out;
+								&:hover {
+									color: white;
+									background-color: #BBB2A6;
+									background-color: #BBB2A6
+								}
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		
+		.items-pagination {
+			text-align: center;
+			margin-bottom: 150px;
+		}
+	}
+}
+@media(max-width: 885px) {
+	.gallery .gallery-brands-carousel .gallery-carousel	{
+		height: 190px;
+		img {
+			width: 150px;
+		}	
+	}
+}
